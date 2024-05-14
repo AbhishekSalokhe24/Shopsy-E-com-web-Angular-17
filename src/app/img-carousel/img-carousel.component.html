@@ -1,23 +1,40 @@
-<div class="container d-flex align-items-center justify-content-center my-5 ">
-  <div class="d-flex justify-content-center align-items-center">
-    <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
-      <div class="carousel-inner">
-        <div *ngFor="let item of childArray; let i = index" [class.active]="i === 0" class="carousel-item">
-          <img [src]="item.image" class="d-block w-100" alt="...">
-          <div class="carousel-caption d-none d-md-block rounded" style="background-color: #ffffffc9;">
-            <!-- <h5 class="text-danger">{{item.title}}</h5>  -->
-            <h4 class="fw-bold" style="color: #172774;">Shopsy's<span class="badge  mx-2" style="background-color: #6C0345;">{{item.title.slice(0,20)}}</span></h4>
+<div class="container d-flex align-items-center justify-content-center my-2">
+ 
+  <div class="row">
+
+    
+    
+    <div class="col-12 my-2">
+      <div class="d-flex justify-content-center align-items-center">
+        <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div *ngFor="let item of childArray; let i = index" [class.active]="i === 0" class="carousel-item">
+              
+              <img [src]="item.image" class="d-block w-100" alt="...">
+              <div class="carousel-caption d-none d-md-block rounded" style="background-color: #ffffffc9;">
+                <!-- <h5 class="text-danger">{{item.title}}</h5>  -->
+                <h4 class="fw-bold" style="color: #172774;">Shopsy's<span class="badge  mx-2" style="background-color: #6C0345;">{{item.title.slice(0,20)}}</span></h4>
+              </div>
+            </div>
           </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
         </div>
       </div>
-      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
     </div>
+
+    <div class="col-12 my-4">
+      <img src="assets/Shpsy Banner.jpg" class="img-fluid" alt="Banner Image">
+    </div>
+    
+
+
+    
   </div>
 </div>
