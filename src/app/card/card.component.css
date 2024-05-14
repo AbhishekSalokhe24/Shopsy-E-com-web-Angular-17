@@ -1,0 +1,45 @@
+.card-img-top{
+    height: 12rem;
+    width: 12rem;
+    mix-blend-mode: multiply;
+}
+#crt-btn{
+    width: 100px;
+    background-color: #362FD9;
+    color: #fff;
+    border: transparent;
+    border-radius: 5px;
+    padding: 10px;
+    width: 100%;
+    font-weight: 400;
+}
+.card{
+    background-color: #F5F7F8;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+#bn-btn{
+    background-color: #F4CE14;
+    color: #000000;
+    border: transparent;
+    border-radius: 5px;
+    padding: 10px;
+    width: 100%;
+    font-weight: 500;
+}
+.card-title{
+    font-size: 15px;
+}
+#price-btn{
+    width: 100%;
+    font-size: 25px;
+    border-radius: 4px;
+    padding: 5px;
+    color: #163020;
+    font-weight: bolder;
+    border: transparent;
+    background-color: transparent;
+}
+.card-text{
+    font-size: 12px;
+    text-align: justify;
+}

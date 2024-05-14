@@ -1,0 +1,46 @@
+<div class="d-flex align-items-center justify-content-center">
+  <h2 class="fw-bold" style="color: #172774;">Shopsy's<span class="badge  mx-2" style="background-color: #FF6500;">New Launches</span></h2>
+</div>
+<div class="d-flex justify-content-end" >
+ 
+  <button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">Apply Filters</button>
+</div>
+
+<div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title text-center" id="offcanvasScrollingLabel">Apply Filters Below</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close" id="close-btn"></button>
+  </div>
+  <div class="offcanvas-body">
+    <div class="categories">
+      <h5  >Categories</h5>
+      <app-catogory-btns (updateProducts)="updateProducts($event)"></app-catogory-btns>
+    </div>
+
+    <div class="price my-2">
+      <h5  >Select Price</h5>
+      <div class="row">
+        <div class="col-5">5 $</div>
+        <div class="col-4">575 $</div>
+        <div class="col-3">1100 $</div>
+      </div>
+      <div class="row">
+        <div class="col-11">
+          <input type="range" class="form-range" min="5" max="1100" step="10" id="customRange3" (change)="rangeChange($event)">
+          <p class="fw-bold text-center">Price range from 5$ - {{priceVal}}$</p>
+        </div>
+      </div>
+    </div>
+    <div class="ratings">
+      <h5  >Ratings</h5>
+      <select class="form-select form-select-sm" aria-label="Small select example">
+        <option selected>Open this select Ratings</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+      </select>
+    </div>
+  </div>
+</div>

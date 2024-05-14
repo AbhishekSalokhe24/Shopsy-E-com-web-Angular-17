@@ -1,0 +1,16 @@
+<div class="container-fluid my-5">
+      
+      <app-filters (productsByPrice)="productsByPrice($event)"></app-filters>
+      <app-carousel></app-carousel>     
+      <app-catogory-btns (updateProducts)="updateProducts($event)" ></app-catogory-btns>
+      <app-card [childArray]="products"></app-card>
+
+      
+</div>
+
+<!-- <div class="container-fluid my-5">
+      <app-filters (productsByPrice)="updateProductsByPrice($event)" [selectedCategory]="selectedCategory"></app-filters>
+      <app-carousel></app-carousel>
+      <app-catogory-btns (updateProducts)="updateProducts($event)" (categoryChanged)="updateCategory($event)"></app-catogory-btns>
+      <app-card [childArray]="filteredProducts"></app-card>
+    </div> -->

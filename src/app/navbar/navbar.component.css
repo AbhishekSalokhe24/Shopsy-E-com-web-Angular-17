@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&family=Poppins&display=swap');
+.navbar{
+    background-color: #ffffff;
+    height: 5rem;
+}
+.container-fluid{
+    background-color: #ffffff;
+}
+.navbar-brand{
+    color:#172774;
+    font-weight: 500;
+}
+
+li,a{
+    color: #862B0D;
+}
+.nav-link:visited{
+    color: #862B0D;
+}
+#logo {
+    height: 40px;
+    width: 50px;
+}
+ 

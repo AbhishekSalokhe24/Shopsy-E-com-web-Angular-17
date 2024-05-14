@@ -1,0 +1,17 @@
+.d-block {
+    height: 350px;
+    width: 450px;
+    
+}
+.carousel-inner{
+    height: 350px;
+    width: 450px;
+}
+
+/* Media query for mobile responsiveness */
+@media screen and (max-width: 767px) {
+    .carousel-inner,.d-block {
+        height: 250px;
+        width: 350px;
+    }
+}
