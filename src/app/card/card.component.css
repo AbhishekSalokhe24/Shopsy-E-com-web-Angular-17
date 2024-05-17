@@ -29,15 +29,9 @@
 .card-title{
     font-size: 15px;
 }
-#price-btn{
-    width: 100%;
-    font-size: 25px;
-    border-radius: 4px;
-    padding: 5px;
-    color: #163020;
-    font-weight: bolder;
-    border: transparent;
-    background-color: transparent;
+.price{
+    font-weight: 500;
+    font-size: 2rem;
 }
 .card-text{
     font-size: 12px;

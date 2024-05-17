@@ -4,13 +4,17 @@
         <img [src]="item.image" class="card-img-top my-4 mx-4" alt="...">
         <div class="card-body">
          
-          <button id="price-btn">Price {{item.price}}$</button>
+        
           <h5 class="card-title text-center">{{item.title.slice(0,20)}}....</h5>
           <span class="badge text-bg-danger text-capitalize my-2 w-70 ">{{item.category}}</span>
           <span class="badge rounded-pill text-bg-info w-30 mx-2">50% OFF</span>
           <!-- <h5><span class="badge text-bg-dark w-30">Orignal Price- {{item.price*2}}$</span></h5> -->
           <p class="card-text">{{item.description.slice(0,100)}}.....</p>
-          
+          <div class="row">
+            <div class="col-12" style="color: #7D0A0A;">
+              <h5 class="text-end price">{{item.price}} $</h5>
+            </div>
+          </div>
           <div class="row">
             <div class="col-6">
               <button id="crt-btn">Add to cart</button>

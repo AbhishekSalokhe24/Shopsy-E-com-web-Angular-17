@@ -37,7 +37,7 @@ export class CatogoryCardsComponent implements OnInit{
 
   // This is Passed By-- Filter Component 
   productsByPrice(FpProducts: any[]) {
-    console.log("Updated Prod by price: ",FpProducts)
+    //console.log("Updated Prod by price: ",FpProducts)
     this.products = FpProducts;
   }
 
