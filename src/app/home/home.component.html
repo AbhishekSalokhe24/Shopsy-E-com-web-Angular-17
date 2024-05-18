@@ -1,0 +1,13 @@
+<div class="container-fluid my-5">
+      
+    <div class="d-flex align-items-center justify-content-center">
+          <h2 class="fw-bold" style="color: #172774;">Shopsy's<span class="badge  mx-2" style="background-color: #FF6500;">New Launches</span></h2>
+    </div>
+    <app-carousel></app-carousel> 
+    <app-filters (productsByPrice)="productsByPrice($event)"></app-filters>
+    <app-catogory-btns (updateProducts)="updateProducts($event)" ></app-catogory-btns>
+    <app-card [childArray]="products"></app-card>
+
+
+    
+</div>

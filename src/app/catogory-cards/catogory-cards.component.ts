@@ -22,7 +22,7 @@ export class CatogoryCardsComponent implements OnInit{
 
   ngOnInit(): void {
     this.getProducts();
-  }
+  } 
    
 
  
