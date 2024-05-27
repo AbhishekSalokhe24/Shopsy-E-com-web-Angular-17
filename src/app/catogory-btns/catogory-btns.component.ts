@@ -12,6 +12,7 @@ import { HttpClient } from '@angular/common/http';
     imports: [CommonModule]
 })
 export class CatogoryBtnsComponent implements OnInit {
+  
   categories: any = [];
   newdata: any = [];
 

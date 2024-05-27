@@ -19,5 +19,9 @@ export class ProductsService {
     return this.http.get(constant.API_END_POINT+constant.METHODS.GET_ALL_PRODUCT+'/'+constant.METHODS.GET_ALL_CATEGORY);
   }
 
+  getSingleProduct(){
+    
+  }
+
   
 }

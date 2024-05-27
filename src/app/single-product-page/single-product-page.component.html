@@ -4,39 +4,28 @@
 
     <div class="container p-5">
       <div class=" d-flex my-6  ">
-        <div class="row">
+        <div class="row" *ngIf="newdata">
           <div class="col-12 col-md-4 justify-content-center">
-            <div class="text-center h-100">
+            <div class="text-center h-50">
               <img
-                src="https://m.media-amazon.com/images/I/71hj88T5aBL._SL1500_.jpg"
-                class="rounded w-100 h-100 cover-image"
+                [src]="newdata.image"
+                class="rounded img-thumbnail h-200 w-200" id="Prodimage"
                 alt="..."
               />
             </div>
           </div>
           <div class="col-12 col-md-8">
-            <p class="fs-6 fw-bold">
-              Redmi 13C (Stardust Black, 6GB RAM, 128GB Storage) | Powered by 4G
-              MediaTek Helio G85 | 90Hz Display | 50MP AI Triple Camera
-            </p>
-            <span class="badge text-bg-danger my-2">Danger</span>
-            <p class="fs-3 fw-bold">120 $</p>
+            <h2>
+              {{newdata.title}} 
+            </h2>
+            <span class="badge text-bg-danger my-2">{{newdata.category}}</span>
+            <p class="fs-3 fw-bold">{{newdata.price}} $</p>
             <p class="fw-1">
-              Processor: High performance MediaTek G85 ; Enhance gaming with 1GHz
-              GPU | 12GB of RAM including 6GB virtual | 6.74" HD+ 90Hz display
-              with Corning Gorilla Glass 3 Protection | 50MP AI Triple camera
-              |Fast Side fingerprint | 5000mAh Battery Processor: High performance
-              MediaTek G85 ; Enhance gaming with 1GHz GPU | 12GB of RAM including
-              6GB virtual | 6.74" HD+ 90Hz display with Corning Gorilla Glass 3
-              Protection | 50MP AI Triple camera |Fast Side fingerprint | 5000mAh
-              <!-- Battery Processor: High performance MediaTek G85 ; Enhance gaming
-              with 1GHz GPU | 12GB of RAM including 6GB virtual | 6.74" HD+ 90Hz
-              display with Corning Gorilla Glass 3 Protection | 50MP AI Triple
-              camera |Fast Side fingerprint | 5000mAh Battery -->
+            {{newdata.description}}
             </p>
             <div class="row">
-              <div class="col-6"><button type="button" class="btn btn-primary  w-100">Add to cart</button></div>
-              <div class="col-6"><button type="button" class="btn btn-primary  w-100">Buy this</button></div>
+              <div class="col-6"><button type="button" class="btn btn-primary btn-sm  w-100">Add to cart</button></div>
+              <div class="col-6"><button type="button" class="btn btn-primary btn-sm  w-100">Buy this</button></div>
             </div>
           </div> 
         </div>
