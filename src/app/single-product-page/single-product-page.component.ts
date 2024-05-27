@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Output } from '@angular/core';
 import { Router } from '@angular/router';
 import { NewProductsComponent } from '../new-products/new-products.component';
 import { ActivatedRoute } from "@angular/router";
@@ -26,10 +26,15 @@ export class SingleProductPageComponent {
       //console.log("product id : ",this.PId);
       this.http.get(`https://fakestoreapi.com/products/${this.PId}`).subscribe((res: any)=>{
       this.newdata = res;
-      console.log("Single Products New data:  ");
-      console.log(this.newdata);
+      //console.log("Single Products New data:  ");
+      //console.log(this.newdata);
+      
+      this.categoryType = this.newdata.category;
+      console.log("New category ::",this.categoryType)
+
       })
     }
-    
+    @Output() categoryType: string = "";
+
 
 }

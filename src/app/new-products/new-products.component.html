@@ -1,55 +1,19 @@
 <div class="d-flex justify-content-center my-5">
-    <h3>Explore <span class="badge " style="background-color: #FF6500;">New Products</span></h3>
+    <h3 class="text-capitalize">{{newCat}}  <span class="badge " style="background-color: #FF6500;">New Products</span></h3>
 </div>
 
   <div class="container d-flex ">
     <div class="row">
      
-      <div class="col-6 col-md-3 mb-3 justify-content-center">
+      <div class="col-6 col-md-3 mb-3 justify-content-center"  *ngFor="let item of categoryProducts">
         <div class="text-center h-100">
           <img
-            src="https://via.placeholder.com/800x400.png?text=Image+1"
-            class="rounded w-100 h-100 cover-image"
+            [src]="item.image"
+            class="rounded img-thumbnail catP"
             alt="..."
           />
         </div>
       </div>
-
-
-      <div class="col-6 col-md-3 mb-3 justify-content-center">
-        <div class="text-center h-100">
-          <img
-            src="https://via.placeholder.com/800x400.png?text=Image+1"
-            class="rounded w-100 h-100 cover-image"
-            alt="..."
-          />
-        </div>
-      </div>
-
-
-      <div class="col-6 col-md-3 mb-3 justify-content-center">
-        <div class="text-center h-100">
-          <img
-            src="https://via.placeholder.com/800x400.png?text=Image+1"
-            class="rounded w-100 h-100 cover-image"
-            alt="..."
-          />
-        </div>
-      </div>
-
-      <div class="col-6 col-md-3 mb-3 justify-content-center">
-        <div class="text-center h-100">
-          <img
-            src="https://via.placeholder.com/800x400.png?text=Image+1"
-            class="rounded w-100 h-100 cover-image"
-            alt="..."
-          />
-        </div>
-      </div>
-
-
-
-
 
     </div>
 

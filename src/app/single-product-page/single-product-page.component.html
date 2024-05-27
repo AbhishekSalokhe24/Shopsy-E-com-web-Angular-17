@@ -2,37 +2,60 @@
 
     <!-- Example Code -->
 
-    <div class="container p-5">
-      <div class=" d-flex my-6  ">
-        <div class="row" *ngIf="newdata">
-          <div class="col-12 col-md-4 justify-content-center">
-            <div class="text-center h-50">
+    <div class="container d-flex align-items-center my-4 vh-auto flex-column">
+      <div class="d-flex">
+        <div class="row " *ngIf="newdata">
+          <div class="col-12 col-md-4 d-flex justify-content-center mb-4 mb-md-0">
+            <div class="text-center h-100">
               <img
                 [src]="newdata.image"
-                class="rounded img-thumbnail h-200 w-200" id="Prodimage"
-                alt="..."
+                class="rounded img-thumbnail w-100"
+                id="Prodimage"
+                alt="Product Image"
               />
             </div>
           </div>
           <div class="col-12 col-md-8">
-            <h2>
-              {{newdata.title}} 
-            </h2>
-            <span class="badge text-bg-danger my-2">{{newdata.category}}</span>
-            <p class="fs-3 fw-bold">{{newdata.price}} $</p>
-            <p class="fw-1">
-            {{newdata.description}}
-            </p>
+            <h2>{{ newdata.title }}</h2>
+            <span class="badge text-bg-danger my-2">{{ newdata.category }}</span>
+            <p class="fs-3 fw-bold">{{ newdata.price }} $</p>
+            <p class="fw-1 text-break" style="text-align: justify;">{{ newdata.description }}</p>
             <div class="row">
-              <div class="col-6"><button type="button" class="btn btn-primary btn-sm  w-100">Add to cart</button></div>
-              <div class="col-6"><button type="button" class="btn btn-primary btn-sm  w-100">Buy this</button></div>
+              <div class="col-6 col-sm-6">
+                <button type="button" class="btn btn-primary btn-sm w-100">Add to cart</button>
+              </div>
+              <div class="col-6 col-sm-6">
+                <button type="button" class="btn btn-primary btn-sm w-100">Buy this</button>
+              </div>
+              <div class="col-12 col-md-6">
+                <label for="quantity" class="form-label my-1">Select Quantity</label>
+                <select class="form-select" id="quantity" name="quantity">
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                  <option value="10">10</option>
+                </select>
+              </div>
             </div>
-          </div> 
+          </div>
+          
+        
+          
         </div>
-    </div>
+      </div>
 
-    <app-new-products> </app-new-products>
+      <app-new-products [newCat]="categoryType"> </app-new-products>
     </div>
+    
+
+    <!-- <app-new-products> </app-new-products> -->
+
   
     
 
