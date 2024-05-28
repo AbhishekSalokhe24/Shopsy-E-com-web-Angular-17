@@ -4,13 +4,15 @@ import { CarouselComponent } from "../carousel/carousel.component";
 import { FiltersComponent } from "../filters/filters.component";
 import { CatogoryBtnsComponent } from "../catogory-btns/catogory-btns.component";
 import { CardComponent } from "../card/card.component";
+import { NavbarComponent } from "../navbar/navbar.component";
+import { FooterComponent } from "../footer/footer.component";
 
 @Component({
     selector: 'app-home',
     standalone: true,
     templateUrl: './home.component.html',
     styleUrl: './home.component.css',
-    imports: [CarouselComponent, FiltersComponent, CatogoryBtnsComponent, CardComponent]
+    imports: [CarouselComponent, FiltersComponent, CatogoryBtnsComponent, CardComponent, NavbarComponent, FooterComponent]
 })
 export class HomeComponent {
   products: any[] | undefined;

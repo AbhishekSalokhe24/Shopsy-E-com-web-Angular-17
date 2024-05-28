@@ -4,13 +4,15 @@ import { NewProductsComponent } from '../new-products/new-products.component';
 import { ActivatedRoute } from "@angular/router";
 import { HttpClient } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
+import { NavbarComponent } from "../navbar/navbar.component";
+import { FooterComponent } from "../footer/footer.component";
 
 @Component({
-  selector: 'app-single-product-page',
-  standalone: true,
-  imports: [NewProductsComponent,CommonModule],
-  templateUrl: './single-product-page.component.html',
-  styleUrl: './single-product-page.component.css'
+    selector: 'app-single-product-page',
+    standalone: true,
+    templateUrl: './single-product-page.component.html',
+    styleUrl: './single-product-page.component.css',
+    imports: [NewProductsComponent, CommonModule, NavbarComponent, FooterComponent]
 })
 export class SingleProductPageComponent {
     
