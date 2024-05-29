@@ -12,6 +12,7 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent {
   form: FormGroup;
+  
 
   constructor(private formBuilder: FormBuilder, private authService: AuthService, private router: Router) {
     this.form = this.formBuilder.group({
@@ -24,17 +25,19 @@ export class LoginComponent {
     if (this.form.valid) {
       const username = this.form.controls['username'].value;
       const password = this.form.controls['password'].value;
-      console.log("Username: ", username, " pass:", password);
+      //console.log("Username: ", username, " pass:", password);
 
       // Call the authentication service's login method
       if (this.authService.login(username, password)) {
         // Navigate to the ProductListComponent upon successful login
-        this.router.navigate(['home']);
+       this.router.navigate(['home']);
+       sessionStorage.setItem("islogedIn","true");
       } else {
         // Handle authentication error (show error message, etc.)
+        sessionStorage.setItem("islogedIn","false");
         alert("Wrong Username and Password");
-        console.error('Authentication failed');
-        console.log("Authentication failed..X")
+       // console.error('Authentication failed');
+        //console.log("Authentication failed..X")
       }
     }
   }
