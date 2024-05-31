@@ -3,6 +3,7 @@ import { SingleProductPageComponent } from './single-product-page/single-product
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { authGuard } from './auth.guard';
+import { CartPageComponent } from './cart-page/cart-page.component';
 
 
 export const routes: Routes = [
@@ -29,6 +30,12 @@ export const routes: Routes = [
         path:"single-prod/:id",
         component:SingleProductPageComponent,
         title:"Shopsy | View Product",
+        canActivate:[authGuard]
+    },
+    {
+        path:"my-cart",
+        component:CartPageComponent,
+        title:"Shopsy | View Cart",
         canActivate:[authGuard]
     }
 ];

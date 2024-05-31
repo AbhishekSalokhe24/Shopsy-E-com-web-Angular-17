@@ -13,25 +13,26 @@
           <a class="nav-link active" aria-current="page" routerLink="/home">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Features</a>
+          <a class="nav-link" routerLink="/home">Features</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Pricing</a>
+          <a class="nav-link" routerLink="/home">Pricing</a>
         </li>
       </ul>
       <ul class="navbar-nav ms-auto mb-4 mb-lg-0">
-        <li class="nav-item">
-          <button class="btn btn-danger position-relative mx-1" (click)="logout()">Logout</button>
-        </li>
         <li class="nav-item  mt-4 mt-lg-0">
-          <button type="button" class="btn btn-primary position-relative">
+          <button type="button" class="btn btn-primary position-relative me-3" routerLink="/my-cart">
             My Cart
-            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-secondary">
               0
-              <span class="visually-hidden">unread messages</span>
+              <span class="visually-hidden"></span>
             </span>
           </button>
         </li>
+        <li class="nav-item">
+          <button class="btn btn-danger position-relative mx-1" (click)="logout()">Logout</button>
+        </li>
+        
       </ul>
     </div>
   </div>
